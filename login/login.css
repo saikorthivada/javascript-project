@@ -1,0 +1,55 @@
+.outer-container {
+    padding: 80px;
+    background-color: #8080802b;
+}
+
+.main-container {
+    height: 84%;
+    width: 100%;
+}
+
+.h-per-100 {
+    height: 100%;
+}
+
+.p-0 {
+    padding: 0px;
+}
+
+.img-container {
+    width: 100%;
+    height: 100%;
+}
+
+.right-container {
+    padding: 120px 50px 0px 50px;
+}
+
+.register-label {
+    font-size: 26px;
+    font-weight: 600;
+    padding-bottom: 30px;
+    margin-bottom: 0px;
+}
+
+.sub-heading {
+    font-size: 18px;
+    font-weight: 400;
+    padding-bottom: 10px;
+    margin-bottom: 0px;
+}
+
+.info {
+    font-size: 12px;
+    font-weight: 300;
+    margin-bottom: 0px;
+}
+
+.recive_emails {
+    padding-left: 30px;
+    padding-top: 14px;
+}
+
+.grey-color {
+    color: grey;
+}
