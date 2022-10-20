@@ -53,3 +53,15 @@
 .grey-color {
     color: grey;
 }
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 0px;
+}
+
+.success {
+    color: green;
+    font-size: 14px;
+    margin-bottom: 0px;
+}

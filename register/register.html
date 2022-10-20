@@ -9,6 +9,7 @@
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
   <link href="./register.css" rel="stylesheet" />
+  <script src="./register.js" defer></script>
 </head>
 
 <body>
@@ -21,6 +22,8 @@
         <div class="col-md-7 col-sm-12 right-container">
           <div>
             <p class="register-label">Register</p>
+            <p class="error" id="duplicate_error"></p>
+            <p class="success" id="success"></p>
           </div>
           <div>
             <p class="sub-heading">Manage all Users in the application</p>
@@ -39,12 +42,14 @@
                 <div class="mb-3">
                   <label for="firstName" class="form-label">First Name</label>
                   <input type="text" class="form-control" id="firstName" placeholder="Enter First Name">
+                  <p class="error" id="firstName_error"></p>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="mb-3">
                   <label for="lastName" class="form-label">Last Name</label>
                   <input type="text" class="form-control" id="lastName" placeholder="Enter Last Name">
+                  <p class="error" id="lastName_error"></p>
                 </div>
               </div>
             </div>
@@ -54,12 +59,14 @@
                 <div class="mb-3">
                   <label for="phoneNumber" class="form-label">Phone Number</label>
                   <input type="number" class="form-control" id="phoneNumber" placeholder="Enter Phone Number">
+                  <p class="error" id="phoneNumber_error"></p>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="mb-3">
                   <label for="emailAddress" class="form-label">Email address</label>
                   <input type="email" class="form-control" id="emailAddress" placeholder="Enter Email address">
+                  <p class="error" id="emailAddress_error"></p>
                 </div>
               </div>
             </div>
@@ -68,13 +75,15 @@
               <div class="col-md-6">
                 <div class="mb-3">
                   <label for="password" class="form-label">Password</label>
-                  <input type="text" class="form-control" id="password" placeholder="Enter Password">
+                  <input type="password" class="form-control" id="password" placeholder="Enter Password">
+                  <p class="error" id="password_error"></p>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="mb-3">
                   <label for="confirmPassword" class="form-label">Confirm Password</label>
-                  <input type="text" class="form-control" id="confirmPassword" placeholder="Enter Confirm Password">
+                  <input type="password" class="form-control" id="confirmPassword" placeholder="Enter Confirm Password">
+                  <p class="error" id="confirmPassword_error"></p>
                 </div>
               </div>
             </div>
@@ -90,19 +99,21 @@
 
             <div class="row">
               <div class="form-check recive_emails">
-                <input class="form-check-input" type="checkbox" value="" id="recieveEmails">
-                <label class="form-check-label grey-color" for="recieveEmails">
+                <input class="form-check-input" type="checkbox" value="" id="iagree">
+                <label class="form-check-label grey-color" for="iagree">
                   <span>I agree to all the </span>
                   <span class="text-primary">Term. Privacy Policy</span>
                   <span> and </span>
                   <span class="text-primary">Fees</span>
                 </label>
+                <p class="error" id="iagree_error"></p>
               </div>
             </div>
 
             <div class="row pt-3">
               <div class="col-md-4 col-sm-12">
-                <button type="button" class="btn btn-primary w-100">Create Account</button>
+                <button type="button" class="btn btn-primary w-100" onclick="submitForm()">Create Account</button>
+                <button type="reset" style="display: none;" id="clear"></button>
               </div>
             </div>
 
@@ -110,7 +121,7 @@
               <div class="form-check">
                 <label class="form-check-label grey-color">
                   <span>Already have an account ?</span>
-                  <span class="text-primary">Login</span>
+                  <span class="text-primary" onclick="login()">Login</span>
                 </label>
               </div>
             </div>
