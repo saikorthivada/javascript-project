@@ -95,8 +95,6 @@ function submitForm() {
         iAgreeElementErrorElement.innerHTML = '';
     }
 
-    console.log(errorCount);
-
     if (errorCount === 0) {
         const recieveEmailsElement = document.getElementById('recieveEmails');
         const userDetails = {
