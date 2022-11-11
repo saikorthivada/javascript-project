@@ -9,6 +9,7 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
     <link href="./dashboard.css" rel="stylesheet" />
+    <script src="./dashboard.js"></script>
 </head>
 
 <body>
@@ -28,17 +29,17 @@
                             <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Users List</a>
+                            <a class="nav-link" onclick="navigateUserList()">Users List</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Reset Password</a>
+                            <a class="nav-link" onclick="navigateToResetPassword()">Reset Password</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Profile</a>
+                            <a class="nav-link" onclick="navigateToProfile()">Profile</a>
                         </li>
                     </ul>
                     <form class="d-flex">
-                        <button class="btn btn-outline-success" type="button">Logout</button>
+                        <button class="btn btn-outline-success" type="button" onclick="logout()">Logout</button>
                     </form>
                 </div>
             </div>
@@ -102,7 +103,7 @@
                         <p class="card-text text-center">Click to to see all the users</p>
                         <div class="d-flex justify-content-end">
 
-                            <a href="#" class="btn btn-primary">Users List</a>
+                            <a onclick="navigateUserList()" class="btn btn-primary">Users List</a>
                         </div>
                     </div>
                 </div>
@@ -112,7 +113,7 @@
                         <h5 class="card-title">Profile</h5>
                         <p class="card-text text-center">Click to to see your profile content</p>
                         <div class="d-flex justify-content-end">
-                            <a href="#" class="btn btn-primary">Profile</a>
+                            <a onclick="navigateToProfile()" class="btn btn-primary">Profile</a>
                         </div>
                     </div>
                 </div>
@@ -122,7 +123,7 @@
                         <h5 class="card-title">Reset Password</h5>
                         <p class="card-text text-center">Click to to reset your password</p>
                         <div class="d-flex justify-content-end">
-                            <a href="#" class="btn btn-primary">Reset password</a>
+                            <a onclick="navigateToResetPassword()" class="btn btn-primary">Reset password</a>
                         </div>
                     </div>
                 </div>
@@ -132,7 +133,7 @@
                         <h5 class="card-title">Logout</h5>
                         <p class="card-text  text-center">Click to to Logout from application</p>
                         <div class="d-flex justify-content-end">
-                            <a href="#" class="btn btn-primary">Logout</a>
+                            <a onclick="logout()" class="btn btn-primary">Logout</a>
                         </div>
                     </div>
                 </div>
